@@ -61,9 +61,17 @@ public class Tesis extends Escrito {
         return this.getPaginas()*palabrasPagina*factor;
     }
 
+    private int getCantidadArgumentos(){
+        int cantidad =  0;
+        for (String string : argumentos) {
+            cantidad += 1;
+        }
+        return cantidad;
+    }
+
     public String toString(){
         String frase = this.getOrigen() +"\n" + this.getTitulo() + "\n" + this.getAutor() + "\n" +
-        this.getPaginas() + "\n" + this.idea + "\n" + this.argumentos + "\n" + this.conclusion+ "\n" 
+        this.getPaginas() + "\n" + this.idea + "\n" + this.getCantidadArgumentos() + "\n" + this.conclusion+ "\n" 
         + this.referencias;
         return frase;
     }
