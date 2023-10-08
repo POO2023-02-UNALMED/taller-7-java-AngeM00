@@ -1,14 +1,22 @@
 package comunicacion;
 
 public class Alfabeto{
-    private String nombre;
+    private String origen;
     protected String[] letras;
     protected String interpretacion;
 
-    public Alfabeto(String nombre,String[] letras,String interpretacion){
-        this.nombre = nombre;
+    public Alfabeto(String origen,String[] letras,String interpretacion){
+        this.origen = origen;
         this.letras = letras;
         this.interpretacion = interpretacion;
+    }
+
+    public String getOrigen() {
+        return origen;
+    }
+
+    public void setOrigen(String origen) {
+        this.origen = origen;
     }
 
     public String[] getLetras(){
